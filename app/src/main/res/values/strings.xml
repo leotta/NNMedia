@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NNMedia</string>
+    <string name="description_post_author_avatar">Post author avatar</string>
+    <string name="description_post_menu">Post menu</string>
+    <string name="description_like">Likes counter</string>
+    <string name="description_share">Links counter</string>
+    <string name="description_eye">view counter</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ННМедиа</string>
+    <string name="description_post_author_avatar">Аватар автора поста</string>
+    <string name="description_post_menu">Меню поста</string>
+    <string name="description_like">Количество лайков</string>
+    <string name="description_share">Сколько раз отправили ссылку на пост</string>
+    <string name="description_eye">Количество просмотров</string>
+</resources>
