@@ -5,4 +5,11 @@
     <string name="description_like">Likes counter</string>
     <string name="description_share">Links counter</string>
     <string name="description_eye">view counter</string>
+    <string name="menu_remove">Remove</string>
+    <string name="menu_edit">Edit</string>
+    <string name="post_text">Enter the text</string>
+    <string name="error_empty_content">Content can\'t be empty</string>
+    <string name="editText">Edit text</string>
+    <string name="description_icEdit">Icon edit text</string>
+    <string name="description_icCancel">Cancel edit</string>
 </resources>

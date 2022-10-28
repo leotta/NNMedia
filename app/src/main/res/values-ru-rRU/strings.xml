@@ -6,4 +6,11 @@
     <string name="description_like">Количество лайков</string>
     <string name="description_share">Сколько раз отправили ссылку на пост</string>
     <string name="description_eye">Количество просмотров</string>
+    <string name="menu_remove">Удалить</string>
+    <string name="menu_edit">Редактировать</string>
+    <string name="post_text">Введите текст</string>
+    <string name="error_empty_content">Содержимое поста не может быть пустым</string>
+    <string name="editText">Редактирование текста</string>
+    <string name="description_icEdit">Иконка редактирования текста</string>
+    <string name="description_icCancel">Отмена редактирования</string>
 </resources>
