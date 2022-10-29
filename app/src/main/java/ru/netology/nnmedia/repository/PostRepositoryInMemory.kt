@@ -92,7 +92,6 @@ class PostRepositoryInMemory : PostRepository {
                 it
             }
         }
-
         data.value = posts
     }
 

@@ -48,18 +48,19 @@ class MainActivity : AppCompatActivity() {
         }
         viewModel.edited.observe(this) {
             if (it.id != 0L) {
+                binding.postsEditText.text = it.content
+                binding.groupEdit.visibility = View.VISIBLE
+                binding.content.requestFocus()
+                binding.content.setText(it.content)
                 binding.icCancel.setOnClickListener {
                     with(binding.content) {
                         setText("")
                         clearFocus()
                         AndroidUtils.hideKeyboard(it)
                         binding.groupEdit.visibility = View.GONE
+                        viewModel.cancelEdit()
                     }
                 }
-                binding.postsEditText.setText(it.content)
-                binding.groupEdit.visibility = View.VISIBLE
-                binding.content.requestFocus()
-                binding.content.setText(it.content)
             } else {
                 with(binding.content) {
                     setText("")
