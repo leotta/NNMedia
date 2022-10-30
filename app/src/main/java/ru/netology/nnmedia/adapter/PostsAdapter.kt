@@ -42,10 +42,13 @@ class PostViewHolder(
             author.text = post.author
             published.text = post.published
             content.text = post.content
-            counterLikes.text = getFormatNumbers(post.counterLikes)
-            counterShare.text = getFormatNumbers(post.counterShare)
+            //counterLikes.text = getFormatNumbers(post.counterLikes)
+            //counterShare.text = getFormatNumbers(post.counterShare)
             counterEye.text = getFormatNumbers(post.counterEye)
-            like.setImageResource(if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24)
+            like.isChecked = post.likedByMe
+            like.text = getFormatNumbers(post.counterLikes)
+            share.text = getFormatNumbers(post.counterShare)
+           // like.setImageResource(if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24)
             like.setOnClickListener {
                 interactionListener.onLike(post)
             }
@@ -88,8 +91,8 @@ class PostDiffCallback: DiffUtil.ItemCallback<Post>(){
 fun getFormatNumbers(count: Int): String {
     return when (count) {
         in 1000..9999 -> if (count.toString()[1] == '0') count.toString()[0] + "K" else count.toString()[0] + "." + count.toString()[1] + "K"
-        in 10_000..99_999 -> "${count.toString()[0]}${count.toString()[1]} K"
-        in 100_000..999_999 -> "${count.toString()[0]}${count.toString()[1]}${count.toString()[2]} K"
+        in 10_000..99_999 -> "${count.toString()[0]}${count.toString()[1]}K"
+        in 100_000..999_999 -> "${count.toString()[0]}${count.toString()[1]}${count.toString()[2]}K"
         in 1_000_000..9_999_999 -> if (count.toString()[1] == '0') count.toString()[0] + "М" else count.toString()[0] + "." + count.toString()[1] + "М"
         else -> "$count"
     }
